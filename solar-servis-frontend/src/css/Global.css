@@ -1,0 +1,1182 @@
+/* ------------------------------
+   Obecné nastavení
+------------------------------ */
+body {
+  background-color: #f0f2f5;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  color: #1f1f1f;
+}
+
+p {
+  color: #6c757d;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Odkazy */
+a {
+  color: #1890ff;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #40a9ff;
+}
+
+/* Menší velikost pro badge */
+.ant-badge-count {
+  font-size: 10px !important; /* Menší velikost textu */
+  line-height: 13px !important; 
+  height: 13px !important;
+  min-width: 13px !important;
+  padding: 0 4px !important;
+  border-radius: 8px !important;
+}
+
+/* Animace zvonečku */
+@keyframes ring {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(15deg); }
+  20% { transform: rotate(-15deg); }
+  30% { transform: rotate(10deg); }
+  40% { transform: rotate(-10deg); }
+  50% { transform: rotate(5deg); }
+  60% { transform: rotate(-5deg); }
+  70% { transform: rotate(3deg); }
+  80% { transform: rotate(-3deg); }
+  90% { transform: rotate(2deg); }
+  100% { transform: rotate(0); }
+}
+
+/* Třída pro animaci zvonečku */
+.bell-animate {
+  animation: ring 1s ease-in-out infinite;
+}
+
+
+/* Tlačítka */
+.button {
+  background-color: #1890ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #40a9ff;
+}
+
+/* ------------------------------
+   Karty (Cards), Statistiky, Listy
+------------------------------ */
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: #333;
+}
+
+.card p {
+  margin-top: 10px;
+  color: #6c757d;
+}
+
+.stat-card {
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card .icon {
+  font-size: 3rem;
+  color: #1890ff;
+  margin-bottom: 10px;
+}
+
+.stat-card .value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f1f1f;
+}
+
+.stat-card .label {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Seznam posledních položek */
+.list-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.recent-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-list li {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #1f1f1f;
+}
+
+.recent-list li:last-child {
+  border-bottom: none;
+}
+
+/* ------------------------------
+   Tabulky, Grafy, Historie objednávek
+------------------------------ */
+.table-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.ant-table {
+  background: #fff;
+  overflow-x: auto;
+}
+
+.ant-table-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.ant-table-thead > tr > th {
+  background: #fafafa;
+  color: #1f1f1f;
+  font-weight: bold;
+  padding: 12px;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.ant-table-tbody > tr > td {
+  color: #595959;
+  padding: 12px;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #e6f7ff;
+}
+
+.chart-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.chart-card h4 {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  color: #1f1f1f;
+}
+
+.chartjs-render-monitor {
+  max-height: 400px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.chartjs-tooltip {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.chart-legend li {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.chart-legend span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+
+.order-history {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-history li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.order-history li .icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #28a745;
+}
+
+.order-history li .details {
+  flex-grow: 1;
+}
+
+.order-history li .details h5 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.order-history li .details p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.tabs .tab {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6c757d;
+  cursor: pointer;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tabs .tab:hover,
+.tabs .tab.active {
+  color: #1890ff;
+  border-bottom: 2px solid #1890ff;
+}
+
+/* Responzivní styly */
+@media (max-width: 768px) {
+  .stat-card .icon {
+    font-size: 2rem;
+  }
+
+  .stat-card .value {
+    font-size: 1.8rem;
+  }
+
+  .stat-card .label {
+    font-size: 0.9rem;
+  }
+
+  .table th,
+  .table td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .order-history li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-history li .details {
+    margin-top: 5px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+/* ------------------------------
+   Formuláře a další prvky
+------------------------------ */
+.report-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.report-form .ant-form-item {
+  margin-bottom: 15px;
+}
+
+.report-form button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.report-form button:hover {
+  background-color: #0056b3;
+}
+
+.report-form textarea {
+  resize: vertical;
+}
+
+/* Google map container */
+.google-map-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+/* Technicians.css */
+.card-actions {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1px;
+  align-items: center;
+}
+
+.card {
+  min-width: 800px;
+  word-wrap: break-word;
+}
+
+/* Splash Screen */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #007bff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease-out;
+  opacity: 1;
+}
+
+.splash-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.splash-logo {
+  max-width: 200px;
+  width: auto;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.loading-bar {
+  width: 60%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  background-color: #fff;
+  width: 0%;
+  animation: loading 3s linear forwards;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* ------------------------------
+   CalendarPage a FullCalendar styly
+------------------------------ */
+
+.events {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.events li {
+  margin-bottom: 5px;
+}
+
+.fc {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.fc-event {
+  cursor: pointer;
+}
+
+.fc-daygrid-event:hover {
+  cursor: pointer;
+}
+
+.fc-daygrid-event {
+  pointer-events: auto;
+}
+
+/* Přizpůsobení vzhledu modalu pro detaily */
+.ant-modal-body {
+  padding: 20px;
+}
+
+/* ------------------------------
+   Navbar a Sidebar Layout
+------------------------------ */
+
+.sidebar-logo img {
+  height: 40px;
+}
+
+.mobile-header .ant-btn {
+  border: none;
+}
+
+/* Přidání dalšího stylování pro Drawer */
+.ant-drawer-body {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  /* Úpravy pro mobilní hlavičku */
+  .mobile-header .ant-menu-inline {
+    background-color: #001529;
+  }
+}
+
+/* Přidání padding-top na mobilních zařízeních, aby obsah nebyl pod fixed Header */
+@media (max-width: 768px) {
+  .site-layout {
+    padding-top: 64px; /* Výška Headeru, případně upravte podle potřeby */
+  }
+}
+
+/* .site-layout je wrapper pro obsah vedle sidebaru, aby se posouval podle stavu collapsed */
+.site-layout {
+  background: #f0f2f5;
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Pokud sidebar collapsed, aplikujte menší margin-left, např. .site-layout.collapsed { margin-left: 80px; } */
+/* Pokud sidebar expanded, např. .site-layout.expanded { margin-left: 250px; } */
+
+/* Další styly navbaru jsou implementované v AntD Layout a Menu. */
+
+/* src/index.css */
+
+/* Obecné nastavení */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Přepisy pro navigační odkazy (toto můžete přesunout do Navbar.css) */
+.nav-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link:hover {
+  color: lightgray;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: lightgray;
+}
+
+/* Další globální styly... */
+
+/* Karty (Cards) */
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: #333;
+}
+
+.card p {
+  margin-top: 10px;
+  color: #6c757d;
+}
+
+/* Changelog modal - celá stránka jako overlay */
+.changelog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Bílá průhledná */
+  display: flex;
+  align-items: center; /* Vertikální zarovnání na střed */
+  justify-content: center; /* Horizontální zarovnání na střed */
+  z-index: 9999; /* Zajistí popředí */
+  backdrop-filter: blur(5px); /* Jemný rozmazaný efekt */
+}
+
+/* Obsah changelog - box */
+.changelog-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  width: 400px;
+  text-align: center; /* Zarovná text doprostřed */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Profesionální stín */
+  animation: fadeIn 0.5s ease-in-out; /* Animace při zobrazení */
+}
+
+/* Nadpis novinek */
+.changelog-content h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333; /* Tmavě šedá */
+}
+
+/* Text novinek */
+.changelog-content p {
+  font-size: 16px;
+  color: #555; /* Lehčí šedá */
+  margin-bottom: 30px;
+}
+
+/* Krásné tlačítko */
+.close-button {
+  background-color: #1890ff; /* Ant Design modrá */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #40a9ff; /* Světlejší modrá při hover */
+}
+
+/* Fade-in animace */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* AddKnowHow.css */
+
+/* Definice fontů pro Quill */
+.ql-font-arial {
+  font-family: Arial, sans-serif;
+}
+
+.ql-font-times-new-roman {
+  font-family: "Times New Roman", serif;
+}
+
+.ql-font-courier-new {
+  font-family: "Courier New", monospace;
+}
+
+.ql-font-verdana {
+  font-family: Verdana, sans-serif;
+}
+
+.ql-font-georgia {
+  font-family: Georgia, serif;
+}
+
+/* Kontejner */
+.add-knowhow-container {
+  padding: 24px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Titulek */
+.add-knowhow-container .ant-typography {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Alert zprávy */
+.alert-message {
+  margin-bottom: 16px;
+}
+
+/* Tlačítko pro přidání tématu */
+.add-topic-button {
+  margin-bottom: 16px;
+}
+
+/* Hlavička editoru */
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Tlačítko pro odeslání */
+.submit-button {
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
+/* ReactQuill editor */
+.react-quill-editor {
+  height: 400px;
+}
+
+/* Responsivní styly */
+@media (max-width: 1200px) {
+  .react-quill-editor {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .editor-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .submit-button {
+    margin-left: 0;
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  .react-quill-editor {
+    height: 250px;
+  }
+
+  .add-topic-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .react-quill-editor {
+    height: 200px;
+  }
+
+  .ant-form-item-label > label {
+    font-size: 14px;
+  }
+
+  .ant-select-selector {
+    font-size: 14px;
+  }
+
+  .ant-input, .ant-btn {
+    font-size: 14px;
+  }
+}
+/* TicketDetails.css */
+
+/* Kontejner pro celou stránku s paddingem */
+.ticket-details-container {
+  padding: 24px;
+}
+
+/* Zprávy v chatu - posíláme je do scrollovacího boxu */
+.ticket-details-messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 16px;
+}
+
+/* Textarea a tlačítko pro odeslání zprávy */
+.ticket-details-input-area {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Responsivní úpravy - menší obrazovky */
+@media (max-width: 576px) {
+  .ticket-details-input-area {
+    flex-direction: column;
+  }
+
+  .ticket-details-messages {
+    max-height: 300px;
+  }
+}
+/* MyTickets.css */
+
+/* Kontejner pro komponentu */
+.my-tickets-container {
+  padding: 24px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Styl pro titulek */
+.my-tickets-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Styl pro table, aby se nepřetahovala přes stránku */
+.my-tickets-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Responsivní styly */
+@media (max-width: 1200px) {
+  .my-tickets-container {
+    padding: 16px;
+  }
+
+  .my-tickets-title {
+    font-size: 1.5rem;
+  }
+
+  .my-tickets-table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-tickets-container {
+    padding: 12px;
+  }
+
+  .my-tickets-title {
+    font-size: 1.3rem;
+  }
+
+  .my-tickets-table {
+    font-size: 0.85rem;
+  }
+
+  .my-tickets-title, .my-tickets-table {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-tickets-container {
+    padding: 8px;
+  }
+
+  .my-tickets-title {
+    font-size: 1.1rem;
+  }
+
+  .my-tickets-table {
+    font-size: 0.8rem;
+  }
+
+  .my-tickets-title, .my-tickets-table {
+    margin-bottom: 12px;
+  }
+
+  /* Ujistěte se, že tlačítka jsou dostatečně velká na dotykové obrazovky */
+  .ant-btn {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+/* src/pages/Login.css */
+
+.login-container {
+  background-color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Chybová zpráva */
+.login-error {
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Ostatní způsoby přihlášení */
+.other-login-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.other-login-methods span {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Přizpůsobení prefixIcon (uživatel a heslo) */
+.prefixIcon {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+
+/* src/pages/ReportPage.css */
+
+.report-page-container {
+  padding: 16px;
+  background-color: #fff;
+}
+
+/* Titulek stránky */
+.report-page-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Akce na stránce: tlačítko a vyhledávání */
+.report-page-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.report-page-search {
+  max-width: 400px;
+}
+
+/* Tabulka s reporty */
+.report-page-table-wrapper {
+  overflow-x: auto;
+}
+
+/* Detailní modál */
+.report-page-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.report-page-card {
+  background: #fafafa;
+}
+
+/* Řádek akcí v tabulce (Detaily, Upravit, atd.) */
+.report-page-actions-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Formulář reportu */
+.report-page-modal {
+  overflow: auto;
+}
+
+.report-page-address {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.report-page-address-input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.report-page-map-container {
+  width: 100%;
+  height: 400px;
+  margin: 10px 0;
+}
+
+.report-page-infowindow {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.report-page-calc-route {
+  margin-top: 10px;
+}
+
+.report-page-card-inner {
+  background: #f9f9f9;
+}
+
+.report-page-no-result {
+  color: #888;
+}
+
+/* Responsivní styly */
+@media (max-width: 768px) {
+  .report-page-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .report-page-search {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .report-page-address {
+    flex-direction: column;
+  }
+}
+
+/* Dashboard.css */
+
+.dashboard-container {
+  padding: 16px;
+  font-family: open sans, Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+.dashboard-container h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #141414;
+}
+
+/* Stat cards */
+.stat-card {
+  box-shadow: 0px 20px 27px #0000000d;
+  border-radius: 12px;
+  text-align: center;
+  padding: 16px;
+}
+
+.stat-card .icon-box {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  background: #1890ff;
+  color: #fff;
+  border-radius: 0.5rem;
+  margin: 0 auto 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card .icon-box svg {
+  font-size: 20px;
+}
+
+.stat-card .value {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #141414;
+}
+
+.stat-card .label {
+  font-size: 14px;
+  color: #8c8c8c;
+  font-weight: 600;
+}
+
+/* List card */
+.list-card {
+  box-shadow: 0px 20px 27px #0000000d;
+  border-radius: 12px;
+}
+
+.list-card .ant-card-head {
+  border-bottom: 0;
+}
+
+.list-card h4,
+.list-card .ant-card-head-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.list-card .recent-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+}
+
+.list-card .recent-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #141414;
+  font-weight: 600;
+}
+
+/* Table card */
+.table-card {
+  box-shadow: 0px 20px 27px #0000000d;
+  border-radius: 12px;
+}
+
+.table-card .ant-card-head {
+  border-bottom: 0;
+}
+
+.table-card .ant-card-head-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.table-card .ant-table-thead > tr > th {
+  color: #8c8c8c;
+  font-weight: 700;
+  background-color: transparent;
+  font-size: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-card .ant-table-tbody > tr > td {
+  font-size: 14px;
+  color: #141414;
+  font-weight: 600;
+}
+
+/* Chart card */
+.chart-card {
+  box-shadow: 0px 20px 27px #0000000d;
+  border-radius: 12px;
+}
+
+.chart-card .ant-card-head {
+  border-bottom: 0;
+}
+
+.chart-card .ant-card-head-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Responsivní přizpůsobení */
+@media (max-width: 768px) {
+  .dashboard-container h1 {
+    text-align: center;
+  }
+}
+
+/* Styl pro Quill editor */
+.react-quill-editor .ql-container {
+  background-color: white; /* Bílé pozadí editoru */
+  min-height: 200px;
+}
+
+.react-quill-editor .ql-toolbar {
+  background-color: #f0f0f0; /* Barva nástrojové lišty */
+}
