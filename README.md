@@ -4,6 +4,22 @@
 [![React](https://img.shields.io/badge/frontend-React-blue)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/backend-Node.js-green)](https://nodejs.org/)
 [![Socket.IO](https://img.shields.io/badge/realtime-Socket.IO-orange)](https://socket.io/)
+[![PostgreSQL](https://img.shields.io/badge/database-PostgreSQL-blue)](https://www.postgresql.org/)
+[![Ant Design](https://img.shields.io/badge/ui-Ant%20Design-0170FE)](https://ant.design/)
+[![Status](https://img.shields.io/badge/status-development-yellow)](https://github.com)
+[![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)](https://github.com)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com)
+[![Platform](https://img.shields.io/badge/platform-web%20%7C%20mobile-lightgrey)](https://github.com)
+[![Supported Browsers](https://img.shields.io/badge/browser-Chrome%20%7C%20Firefox%20%7C%20Edge-blue)](https://github.com)
+[![Localization](https://img.shields.io/badge/languages-EasyToTranslate%20%7C%20Czech-blue)](https://github.com)
+[![Code Language](https://img.shields.io/badge/code-JavaScript-yellow)](https://github.com)
+[![Security](https://img.shields.io/badge/security-JWT%20%7C%20HTTPS-green)](https://github.com)
+
+
+
+
+**Poznámka**: Aplikace je stále ve fázi vývoje. Funkce a rozhraní se mohou měnit.
 
 **Trackly** je všestranná webová aplikace, která pomáhá týmům snadno spravovat úkoly, projekty, zdroje a klienty. Díky své modularitě je ideální pro oblasti, jako jsou IT projekty, služby zákazníkům, výroba nebo správa majetku.
 
